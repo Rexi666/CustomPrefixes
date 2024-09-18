@@ -1,0 +1,29 @@
+database:
+  # You can use sqlite (DEFAULT) or mysql/mariadb
+
+  # On type, choose "sqlite" or "mysql"
+  type: sqlite
+  mysql:
+    # In case, you choose mysql/mariadb, change the data below.
+    host: "localhost"
+    port: 3306
+    database: "customprefixes"
+    username: "root"
+    password: "password"
+
+# How often do you want players to be able to change their tag (in days)?
+tag-change-cooldown: 30
+
+# This will cause a preview of the tag to appear when you run /tag <tag>
+# so the player can modify it before using /confirmtag which will put the cooldown on it.
+tag-change-confirmation: true
+
+# Tag format. %tag% will be replaced with players tag
+tag-format: "%tag% &r"
+
+# Forbidden words in tags (In lowercase)
+forbidden-words:
+  - fuck
+  - shit
+  - owner
+  - admin

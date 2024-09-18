@@ -1,0 +1,25 @@
+name: CustomPrefixes
+version: '${version}'
+main: me.rexi.customprefixes.CustomPrefixes
+api-version: '1.20'
+description: Let your users customize their prefixes!
+author: Rexi666
+website: https://linktr.ee/rexi666
+commands:
+  tag:
+    description: Change your tag
+    aliases:
+      - prefix
+  confirmtag:
+    description: Confirm the tag you previewed
+    aliases:
+      - confirmprefix
+  admintag:
+    description: Manage people's tags
+permissions:
+  customprefixes.tag:
+    description: Allows you to personalize your tag
+    default: false
+  customprefixes.admin:
+    description: Allows you to manage people's tags
+    default: op

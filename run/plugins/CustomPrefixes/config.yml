@@ -1,0 +1,16 @@
+database:
+  # You can use sqlite (DEFAULT) or mysql/mariadb
+
+  # On type, choose "sqlite" or "mysql"
+  type: sqlite
+  mysql:
+    # In case, you choose mysql/mariadb, change the data below.
+    host: "localhost"
+    port: 3306
+    database: "customprefixes"
+    username: "root"
+    password: "password"
+  sqlite:
+    # In case you choose sqlite (default), you can change the information below
+    # but it is better not to change the default.
+    file: "data/database.db"
