@@ -1,0 +1,11 @@
+# Ignorar carpetas generadas por IntelliJ
+/.idea/
+/out/
+
+# Ignorar carpetas generadas por compilaciones
+/target/
+/build/
+
+# Archivos de logs y temporales
+*.log
+*.class
