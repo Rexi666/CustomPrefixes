@@ -1,3 +1,7 @@
+#Don't touch this number!
+config-version: 1
+
+# Save the data of the plugin
 database:
   # You can use sqlite (DEFAULT) or mysql/mariadb
 
@@ -10,6 +14,21 @@ database:
     database: "customprefixes"
     username: "root"
     password: "password"
+
+# Send a discord message when someone change the tag. NEED RESTART
+discord-webhook:
+  enabled: false # Enable this feature
+  url: "https://discord.com/api/webhooks/your_webhook_url"
+  avatar: "https://example.com/avatar.png"
+  username: "CustomPrefixes"
+  embed:
+    color:
+      red: 255
+      green: 0
+      blue: 0
+    title: "Tag Changed"
+    description: "{player} has changed his tag to {tag}" # (Supports PlaceholderAPI)
+  content: "A player has changed their tag" # Content outside the embed (optional)
 
 # How often do you want players to be able to change their tag (in days)?
 tag-change-cooldown: 30

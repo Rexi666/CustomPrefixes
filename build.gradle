@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'me.rexi'
-version = '0.4-BETA'
+version = '0.5-BETA'
 
 repositories {
     mavenCentral()
@@ -18,6 +18,10 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven {
+        name = "placeholderapi"
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
 }
 
 dependencies {
@@ -27,6 +31,7 @@ dependencies {
     compileOnly 'net.luckperms:api:5.4'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.33'
     implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.46.1.0'
+    compileOnly "me.clip:placeholderapi:2.11.5"
 }
 
 tasks {

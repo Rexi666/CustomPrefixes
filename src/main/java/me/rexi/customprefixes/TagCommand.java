@@ -83,15 +83,15 @@ public class TagCommand implements CommandExecutor {
 
         if (plugin.getConfig().getBoolean("tag-change-confirmation")) {
             pendingTags.put(player.getUniqueId(), tag);
-            sender.sendMessage(Component.text(""));
-            sender.sendMessage(Component.text("").append(prefix)
+            player.sendMessage(Component.text(""));
+            player.sendMessage(Component.text("").append(prefix)
                     .append(Component.text(" Preview of your tag: ").color(NamedTextColor.GREEN)));
-            sender.sendMessage(Component.text("").append(prefix)
+            player.sendMessage(Component.text("").append(prefix)
                     .append(Component.text(" "))
                     .append(Component.text(formattedTag)));
-            sender.sendMessage(Component.text("").append(prefix)
+            player.sendMessage(Component.text("").append(prefix)
                     .append(Component.text(" Use /confirmtag to apply it.").color(NamedTextColor.YELLOW)));
-            sender.sendMessage(Component.text(""));
+            player.sendMessage(Component.text(""));
             return true;
         }
 
@@ -140,6 +140,7 @@ public class TagCommand implements CommandExecutor {
         formattedTag = ChatColor.translateAlternateColorCodes('&', formattedTag);
 
         String setTagCommand = "lp user " + player.getName() + " meta setprefix \"" + formattedTag + "\"";
+        plugin.onTagChange(player, formattedTag); // Cambiado para pasar el objeto Player
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), setTagCommand);
 
         databaseManager.updatePlayerTag(player.getUniqueId(), tag, currentTime);

@@ -5,6 +5,7 @@
 # Ignorar carpetas generadas por compilaciones
 /target/
 /build/
+/run/
 
 # Archivos de logs y temporales
 *.log

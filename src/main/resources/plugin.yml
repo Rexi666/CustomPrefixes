@@ -5,6 +5,7 @@ api-version: '1.20'
 description: Let your users customize their prefixes!
 author: Rexi666
 website: https://linktr.ee/rexi666
+depend: [PlaceholderAPI, LuckPerms]
 commands:
   tag:
     description: Change your tag
