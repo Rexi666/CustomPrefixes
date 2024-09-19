@@ -1,7 +1,7 @@
 # CustomPrefixes
 Let your users customize their prefix
 
-Many servers have in their store the so-called "custom prefix". With this plugin, you can easily let your users decide what tag/prefix they watn
+Many servers have in their store the so-called "custom prefix". With this plugin, you can easily let your users decide what tag/prefix they want
 
 # Download
 ### Releases
